@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const clickedItem = e.target.closest('.video-item');
             if (!clickedItem) return;
 
-            const mainItem = mainVideoSlot; // The main slot itself
+            const mainItem = mainVideoSlot.querySelector('[data-video-id]');
             if (!mainItem) return;
 
             // Store data from both items by reading their datasets
