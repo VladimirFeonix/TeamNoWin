@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeamNoWin</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" href="/img/logo.svg">
+    <link rel="stylesheet" href="TeamNoWin/css/style.css">
+    <link rel="icon" href="TeamNoWin/img/logo.svg">
     <style>
         .modal-overlay {
             transition: opacity 0.3s ease;
@@ -240,14 +240,198 @@
                 </div>
             </div>
                     </div>
-            
-            
-            
-            
-            
-            
-            
-            
+
+ <!-- 3. Players Section -->
+        <div>
+            <div id="players" class="relative py-12 flex flex-col items-center justify-center text-center" data-cmp="SectionDivider">
+                <div class="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-dota-border to-transparent -z-10"></div>
+                <div class="bg-[#121212] px-8 relative flex flex-col items-center gap-2">
+                    <div class="text-dota-gold mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-dota font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#e3c489] to-[#8a6e3d] uppercase tracking-wider drop-shadow-md">
+                        Наши Легенды
+                    </h2>
+                    <p class="text-gray-500 font-serif italic">Люди, которые делают ваши игры незабываемо плохими</p>
+                    <div class="flex items-center gap-2 mt-2">
+                        <div class="w-12 h-[2px] bg-dota-red/50"></div>
+                        <div class="w-2 h-2 rotate-45 border border-dota-gold"></div>
+                        <div class="w-12 h-[2px] bg-dota-red/50"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-cmp="PlayerRoster">
+                <!-- Player 1 -->
+                <div class="player-card relative group cursor-pointer hover:-translate-y-1 transition-transform duration-300 hover:border-opacity-100 border-opacity-40 border-red-900/50" data-cmp="GameFrame">
+                    <div class="relative bg-dota-panel/90 border-2 backdrop-blur-sm p-6 overflow-hidden border-dota-border">
+                        <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-dota-silver"></div>
+                        <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-dota-silver"></div>
+                        <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-dota-silver"></div>
+                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-dota-silver"></div>
+                        <div class="flex flex-col items-center text-center space-y-4">
+                            <div class="w-24 h-24 bg-[#0a0a0a] rounded-sm border border-white/10 relative overflow-hidden group-hover:border-dota-gold/50 transition-colors">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                                <img src="TeamNoWin/img/serega.jpg" alt="Серёга ">
+                                <div class="absolute top-1 right-1 z-20 bg-black/80 p-1 rounded border border-white/20">
+                                    
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="player-name text-xl font-dota text-gray-200 group-hover:text-white">Серёга "Prime" Курилов</h3>
+                                <p class="player-role text-dota-gold text-xs uppercase tracking-wider font-bold mt-1">Рубик/саппорт/если керри - анлак</p>
+                            </div>
+                            <div class="w-full h-[1px] bg-white/10"></div>
+                            <div class="space-y-2 w-full">
+                                <p class="player-description text-gray-400 text-sm italic">"Топ 1 по скилу в дискорде (наверное). Трушный анимешник, осуждает хентай и порно! И женщин!"</p>
+                                <div class="text-xs text-gray-500 pt-2 flex items-center justify-center gap-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 2 -->
+                <div class="player-card relative group cursor-pointer hover:-translate-y-1 transition-transform duration-300 hover:border-opacity-100 border-opacity-40 border-gray-700/50" data-cmp="GameFrame">
+                    <div class="relative bg-dota-panel/90 border-2 backdrop-blur-sm p-6 overflow-hidden border-dota-border">
+                        <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-dota-silver"></div>
+                        <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-dota-silver"></div>
+                        <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-dota-silver"></div>
+                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-dota-silver"></div>
+                        <div class="flex flex-col items-center text-center space-y-4">
+                            <div class="w-24 h-24 bg-[#0a0a0a] rounded-sm border border-white/10 relative overflow-hidden group-hover:border-dota-gold/50 transition-colors">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                                <img src="TeamNoWin/img/Roma3.1.jpg" alt="Рафаиль">
+                                <div class="absolute top-1 right-1 z-20 bg-black/80 p-1 rounded border border-white/20">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="player-name text-xl font-dota text-gray-200 group-hover:text-white">Рафаиль "Сон Джин-Ву" Ханбиков</h3>
+                                <p class="player-role text-dota-gold text-xs uppercase tracking-wider font-bold mt-1">Всё попало на мид/другая роль: тильт!</p>
+                            </div>
+                            <div class="w-full h-[1px] bg-white/10"></div>
+                            <div class="space-y-2 w-full">
+                                <p class="player-description text-gray-400 text-sm italic">"Его легко потерять, трудно найти и невозможно забыть! Появляется так же внезапно как и пропадает."</p>
+                                <div class="text-xs text-gray-500 pt-2 flex items-center justify-center gap-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 3 -->
+                <div class="player-card relative group cursor-pointer hover:-translate-y-1 transition-transform duration-300 hover:border-opacity-100 border-opacity-40 border-blue-900/50" data-cmp="GameFrame">
+                    <div class="relative bg-dota-panel/90 border-2 backdrop-blur-sm p-6 overflow-hidden border-dota-border">
+                        <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-dota-silver"></div>
+                        <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-dota-silver"></div>
+                        <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-dota-silver"></div>
+                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-dota-silver"></div>
+                        <div class="flex flex-col items-center text-center space-y-4">
+                            <div class="w-24 h-24 bg-[#0a0a0a] rounded-sm border border-white/10 relative overflow-hidden group-hover:border-dota-gold/50 transition-colors">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                               <img src="TeamNoWin/img/lexa.jpg" alt="Алексей">
+                                <div class="absolute top-1 right-1 z-20 bg-black/80 p-1 rounded border border-white/20">
+                                    
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="player-name text-xl font-dota text-gray-200 group-hover:text-white">Алексей "Сосал?" Абдрахманов</h3>
+                                <p class="player-role text-dota-gold text-xs uppercase tracking-wider font-bold mt-1">Антимаг/пудж или тильт с нулевой</p>
+                            </div>
+                            <div class="w-full h-[1px] bg-white/10"></div>
+                            <div class="space-y-2 w-full">
+                                <p class="player-description text-gray-400 text-sm italic">"Умеет играть, но редко хочет, а когда хочет , обычно под солями. Чиловый парень, нереальный гангстер и просто Широкой Души парень!"</p>
+                                <div class="text-xs text-gray-500 pt-2 flex items-center justify-center gap-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 4 -->
+                <div class="player-card relative group cursor-pointer hover:-translate-y-1 transition-transform duration-300 hover:border-opacity-100 border-opacity-40 border-green-900/50" data-cmp="GameFrame">
+                     <div class="relative bg-dota-panel/90 border-2 backdrop-blur-sm p-6 overflow-hidden border-dota-border">
+                        <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-dota-silver"></div>
+                        <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-dota-silver"></div>
+                        <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-dota-silver"></div>
+                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-dota-silver"></div>
+                        <div class="flex flex-col items-center text-center space-y-4">
+                            <div class="w-24 h-24 bg-[#0a0a0a] rounded-sm border border-white/10 relative overflow-hidden group-hover:border-dota-gold/50 transition-colors">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                                <img src="TeamNoWin/img/sanya.jpg" alt="Александр">
+                                <div class="absolute top-1 right-1 z-20 bg-black/80 p-1 rounded border border-white/20">
+
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="player-name text-xl font-dota text-gray-200 group-hover:text-white">Александр "Радио" Блахин</h3>
+                                <p class="player-role text-dota-gold text-xs uppercase tracking-wider font-bold mt-1">Пудж обыкновенный "Кустовой"</p>
+                            </div>
+                            <div class="w-full h-[1px] bg-white/10"></div>
+                            <div class="space-y-2 w-full">
+                                <p class="player-description text-gray-400 text-sm italic">"Лучший друг Лехи, готов раздвинуть для Сани свои булочки". Стилит килы у своего кери (а может и нет)</p>
+                                <div class="text-xs text-gray-500 pt-2 flex items-center justify-center gap-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 5 -->
+                <div class="player-card relative group cursor-pointer hover:-translate-y-1 transition-transform duration-300 hover:border-opacity-100 border-opacity-40 border-yellow-900/50" data-cmp="GameFrame">
+                    <div class="relative bg-dota-panel/90 border-2 backdrop-blur-sm p-6 overflow-hidden border-dota-border">
+                        <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-dota-silver"></div>
+                        <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-dota-silver"></div>
+                        <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-dota-silver"></div>
+                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-dota-silver"></div>
+                        <div class="flex flex-col items-center text-center space-y-4">
+                            <div class="w-24 h-24 bg-[#0a0a0a] rounded-sm border border-white/10 relative overflow-hidden group-hover:border-dota-gold/50 transition-colors">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                                <img src="TeamNoWin/img/vova.jpg" alt="Владимир">
+                                <div class="absolute top-1 right-1 z-20 bg-black/80 p-1 rounded border border-white/20">
+                                    
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="player-name text-xl font-dota text-gray-200 group-hover:text-white">Владимир "Философ" Волков</h3>
+                                <p class="player-role text-dota-gold text-xs uppercase tracking-wider font-bold mt-1">Куда укажет судьба (желательно кор на лоу птс)</p>
+                            </div>
+                            <div class="w-full h-[1px] bg-white/10"></div>
+                            <div class="space-y-2 w-full">
+                                <p class="player-description text-gray-400 text-sm italic">"Обладатель титула "Знаток Хентая/Порно". Всё что можно осудить, моя тема! Шестая позиция доты и постоянный зритель!"</p>
+                                <div class="text-xs text-gray-500 pt-2 flex items-center justify-center gap-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Player 6 -->
+                <div class="player-card relative group cursor-pointer hover:-translate-y-1 transition-transform duration-300 hover:border-opacity-100 border-opacity-40 border-dota-gold/50" data-cmp="GameFrame">
+                    <div class="relative bg-dota-panel/90 border-2 backdrop-blur-sm p-6 overflow-hidden border-dota-border">
+                        <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-dota-silver"></div>
+                        <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-dota-silver"></div>
+                        <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-dota-silver"></div>
+                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-dota-silver"></div>
+                        <div class="flex flex-col items-center text-center space-y-4">
+                            <div class="w-24 h-24 bg-[#0a0a0a] rounded-sm border border-white/10 relative overflow-hidden group-hover:border-dota-gold/50 transition-colors">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                                <img src="TeamNoWin/img/maxim.jpg" alt="Максим">
+                                <div class="absolute top-1 right-1 z-20 bg-black/80 p-1 rounded border border-white/20">
+                                    
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="player-name text-xl font-dota text-gray-200 group-hover:text-white">Максим "Винишко" Юдин</h3>
+                                <p class="player-role text-dota-gold text-xs uppercase tracking-wider font-bold mt-1">жертва(С Саней стоит)</p>
+                            </div>
+                            <div class="w-full h-[1px] bg-white/10"></div>
+                            <div class="space-y-2 w-full">
+                                <p class="player-description text-gray-400 text-sm italic">"Мозговитый Анимешник с деньгами, любит маленьких девочек и вино. Программировать научился, а добивать крипов - нет."</p>
+                                <div class="text-xs text-gray-500 pt-2 flex items-center justify-center gap-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
             
             
                     <!-- 4. Video Gallery -->
@@ -455,197 +639,7 @@
                 </div>
             </div>
         </main>
-        <!-- 3. Players Section -->
-        <div>
-            <div id="players" class="relative py-12 flex flex-col items-center justify-center text-center" data-cmp="SectionDivider">
-                <div class="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-dota-border to-transparent -z-10"></div>
-                <div class="bg-[#121212] px-8 relative flex flex-col items-center gap-2">
-                    <div class="text-dota-gold mb-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                    </div>
-                    <h2 class="text-3xl md:text-4xl font-dota font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#e3c489] to-[#8a6e3d] uppercase tracking-wider drop-shadow-md">
-                        Наши Легенды
-                    </h2>
-                    <p class="text-gray-500 font-serif italic">Люди, которые делают ваши игры незабываемо плохими</p>
-                    <div class="flex items-center gap-2 mt-2">
-                        <div class="w-12 h-[2px] bg-dota-red/50"></div>
-                        <div class="w-2 h-2 rotate-45 border border-dota-gold"></div>
-                        <div class="w-12 h-[2px] bg-dota-red/50"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-cmp="PlayerRoster">
-                <!-- Player 1 -->
-                <div class="player-card relative group cursor-pointer hover:-translate-y-1 transition-transform duration-300 hover:border-opacity-100 border-opacity-40 border-red-900/50" data-cmp="GameFrame">
-                    <div class="relative bg-dota-panel/90 border-2 backdrop-blur-sm p-6 overflow-hidden border-dota-border">
-                        <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-dota-silver"></div>
-                        <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-dota-silver"></div>
-                        <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-dota-silver"></div>
-                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-dota-silver"></div>
-                        <div class="flex flex-col items-center text-center space-y-4">
-                            <div class="w-24 h-24 bg-[#0a0a0a] rounded-sm border border-white/10 relative overflow-hidden group-hover:border-dota-gold/50 transition-colors">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                                <img src="/img/serega.jpg" alt="Серёга ">
-                                <div class="absolute top-1 right-1 z-20 bg-black/80 p-1 rounded border border-white/20">
-                                    
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="player-name text-xl font-dota text-gray-200 group-hover:text-white">Серёга "Prime" Курилов</h3>
-                                <p class="player-role text-dota-gold text-xs uppercase tracking-wider font-bold mt-1">Рубик/саппорт/если керри - анлак</p>
-                            </div>
-                            <div class="w-full h-[1px] bg-white/10"></div>
-                            <div class="space-y-2 w-full">
-                                <p class="player-description text-gray-400 text-sm italic">"Топ 1 по скилу в дискорде (наверное). Трушный анимешник, осуждает хентай и порно! И женщин!"</p>
-                                <div class="text-xs text-gray-500 pt-2 flex items-center justify-center gap-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Player 2 -->
-                <div class="player-card relative group cursor-pointer hover:-translate-y-1 transition-transform duration-300 hover:border-opacity-100 border-opacity-40 border-gray-700/50" data-cmp="GameFrame">
-                    <div class="relative bg-dota-panel/90 border-2 backdrop-blur-sm p-6 overflow-hidden border-dota-border">
-                        <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-dota-silver"></div>
-                        <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-dota-silver"></div>
-                        <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-dota-silver"></div>
-                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-dota-silver"></div>
-                        <div class="flex flex-col items-center text-center space-y-4">
-                            <div class="w-24 h-24 bg-[#0a0a0a] rounded-sm border border-white/10 relative overflow-hidden group-hover:border-dota-gold/50 transition-colors">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                                <img src="/img/Roma3.1.jpg" alt="Рафаиль">
-                                <div class="absolute top-1 right-1 z-20 bg-black/80 p-1 rounded border border-white/20">
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="player-name text-xl font-dota text-gray-200 group-hover:text-white">Рафаиль "Сон Джин-Ву" Ханбиков</h3>
-                                <p class="player-role text-dota-gold text-xs uppercase tracking-wider font-bold mt-1">Всё попало на мид/другая роль: тильт!</p>
-                            </div>
-                            <div class="w-full h-[1px] bg-white/10"></div>
-                            <div class="space-y-2 w-full">
-                                <p class="player-description text-gray-400 text-sm italic">"Его легко потерять, трудно найти и невозможно забыть! Появляется так же внезапно как и пропадает."</p>
-                                <div class="text-xs text-gray-500 pt-2 flex items-center justify-center gap-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Player 3 -->
-                <div class="player-card relative group cursor-pointer hover:-translate-y-1 transition-transform duration-300 hover:border-opacity-100 border-opacity-40 border-blue-900/50" data-cmp="GameFrame">
-                    <div class="relative bg-dota-panel/90 border-2 backdrop-blur-sm p-6 overflow-hidden border-dota-border">
-                        <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-dota-silver"></div>
-                        <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-dota-silver"></div>
-                        <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-dota-silver"></div>
-                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-dota-silver"></div>
-                        <div class="flex flex-col items-center text-center space-y-4">
-                            <div class="w-24 h-24 bg-[#0a0a0a] rounded-sm border border-white/10 relative overflow-hidden group-hover:border-dota-gold/50 transition-colors">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                               <img src="/img/lexa.jpg" alt="Алексей">
-                                <div class="absolute top-1 right-1 z-20 bg-black/80 p-1 rounded border border-white/20">
-                                    
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="player-name text-xl font-dota text-gray-200 group-hover:text-white">Алексей "Сосал?" Абдрахманов</h3>
-                                <p class="player-role text-dota-gold text-xs uppercase tracking-wider font-bold mt-1">Антимаг/пудж или тильт с нулевой</p>
-                            </div>
-                            <div class="w-full h-[1px] bg-white/10"></div>
-                            <div class="space-y-2 w-full">
-                                <p class="player-description text-gray-400 text-sm italic">"Умеет играть, но редко хочет, а когда хочет , обычно под солями. Чиловый парень, нереальный гангстер и просто Широкой Души парень!"</p>
-                                <div class="text-xs text-gray-500 pt-2 flex items-center justify-center gap-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Player 4 -->
-                <div class="player-card relative group cursor-pointer hover:-translate-y-1 transition-transform duration-300 hover:border-opacity-100 border-opacity-40 border-green-900/50" data-cmp="GameFrame">
-                     <div class="relative bg-dota-panel/90 border-2 backdrop-blur-sm p-6 overflow-hidden border-dota-border">
-                        <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-dota-silver"></div>
-                        <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-dota-silver"></div>
-                        <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-dota-silver"></div>
-                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-dota-silver"></div>
-                        <div class="flex flex-col items-center text-center space-y-4">
-                            <div class="w-24 h-24 bg-[#0a0a0a] rounded-sm border border-white/10 relative overflow-hidden group-hover:border-dota-gold/50 transition-colors">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                                <img src="/img/sanya.jpg" alt="Александр">
-                                <div class="absolute top-1 right-1 z-20 bg-black/80 p-1 rounded border border-white/20">
-
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="player-name text-xl font-dota text-gray-200 group-hover:text-white">Александр "Радио" Блахин</h3>
-                                <p class="player-role text-dota-gold text-xs uppercase tracking-wider font-bold mt-1">Пудж обыкновенный "Кустовой"</p>
-                            </div>
-                            <div class="w-full h-[1px] bg-white/10"></div>
-                            <div class="space-y-2 w-full">
-                                <p class="player-description text-gray-400 text-sm italic">"Лучший друг Лехи, готов раздвинуть для Сани свои булочки". Стилит килы у своего кери (а может и нет)</p>
-                                <div class="text-xs text-gray-500 pt-2 flex items-center justify-center gap-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Player 5 -->
-                <div class="player-card relative group cursor-pointer hover:-translate-y-1 transition-transform duration-300 hover:border-opacity-100 border-opacity-40 border-yellow-900/50" data-cmp="GameFrame">
-                    <div class="relative bg-dota-panel/90 border-2 backdrop-blur-sm p-6 overflow-hidden border-dota-border">
-                        <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-dota-silver"></div>
-                        <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-dota-silver"></div>
-                        <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-dota-silver"></div>
-                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-dota-silver"></div>
-                        <div class="flex flex-col items-center text-center space-y-4">
-                            <div class="w-24 h-24 bg-[#0a0a0a] rounded-sm border border-white/10 relative overflow-hidden group-hover:border-dota-gold/50 transition-colors">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                                <img src="/img/vova.jpg" alt="Владимир">
-                                <div class="absolute top-1 right-1 z-20 bg-black/80 p-1 rounded border border-white/20">
-                                    
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="player-name text-xl font-dota text-gray-200 group-hover:text-white">Владимир "Философ" Волков</h3>
-                                <p class="player-role text-dota-gold text-xs uppercase tracking-wider font-bold mt-1">Куда укажет судьба (желательно кор на лоу птс)</p>
-                            </div>
-                            <div class="w-full h-[1px] bg-white/10"></div>
-                            <div class="space-y-2 w-full">
-                                <p class="player-description text-gray-400 text-sm italic">"Обладатель титула "Знаток Хентая/Порно". Всё что можно осудить, моя тема! Шестая позиция доты и постоянный зритель!"</p>
-                                <div class="text-xs text-gray-500 pt-2 flex items-center justify-center gap-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Player 6 -->
-                <div class="player-card relative group cursor-pointer hover:-translate-y-1 transition-transform duration-300 hover:border-opacity-100 border-opacity-40 border-dota-gold/50" data-cmp="GameFrame">
-                    <div class="relative bg-dota-panel/90 border-2 backdrop-blur-sm p-6 overflow-hidden border-dota-border">
-                        <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-dota-silver"></div>
-                        <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-dota-silver"></div>
-                        <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-dota-silver"></div>
-                        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-dota-silver"></div>
-                        <div class="flex flex-col items-center text-center space-y-4">
-                            <div class="w-24 h-24 bg-[#0a0a0a] rounded-sm border border-white/10 relative overflow-hidden group-hover:border-dota-gold/50 transition-colors">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                                <img src="/img/maxim.jpg" alt="Максим">
-                                <div class="absolute top-1 right-1 z-20 bg-black/80 p-1 rounded border border-white/20">
-                                    
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="player-name text-xl font-dota text-gray-200 group-hover:text-white">Максим "Винишко" Юдин</h3>
-                                <p class="player-role text-dota-gold text-xs uppercase tracking-wider font-bold mt-1">жертва(С Саней стоит)</p>
-                            </div>
-                            <div class="w-full h-[1px] bg-white/10"></div>
-                            <div class="space-y-2 w-full">
-                                <p class="player-description text-gray-400 text-sm italic">"Мозговитый Анимешник с деньгами, любит маленьких девочек и вино. Программировать научился, а добивать крипов - нет."</p>
-                                <div class="text-xs text-gray-500 pt-2 flex items-center justify-center gap-2">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
+       
     <!-- Footer -->
     <footer class="border-t border-[#2a2a2a] py-8 text-center bg-[#0a0a0a] relative">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#121212] px-4">
@@ -655,7 +649,7 @@
             &copy; 2024 TEAM NO WIN. GL HF.
         </p>
     </footer>
-    <script src="/js/script.js"></script>
+    
     <!-- Modal -->
     <div id="commandment-modal" class="modal-hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
         <!-- Overlay -->
@@ -710,5 +704,6 @@
         </div>
     </div>
 </body>
-</html>
+
+<script src="TeamNoWin/js/script.js"></script>
 </html>
