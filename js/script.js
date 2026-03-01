@@ -138,4 +138,115 @@ document.addEventListener('DOMContentLoaded', () => {
     if (playerModalOverlay) {
         playerModalOverlay.addEventListener('click', closePlayerModal);
     }
+
+    // Video Gallery Logic
+    const mainVideoSlot = document.getElementById('main-video-slot');
+    const sideVideoList = document.getElementById('side-video-list');
+
+    if (mainVideoSlot && sideVideoList) {
+        sideVideoList.addEventListener('click', (e) => {
+            const clickedSideItem = e.target.closest('.video-item');
+            if (!clickedSideItem) return;
+
+            const mainItem = mainVideoSlot.querySelector('[data-video-id]');
+            if (!mainItem) return;
+
+            // Store data from both items
+            const mainData = { ...mainItem.dataset };
+            const sideData = { ...clickedSideItem.dataset };
+
+            // Prevent swapping with itself
+            if (mainData.videoId === sideData.videoId) return;
+
+            // Update the main item with side data
+            mainItem.dataset.videoId = sideData.videoId;
+            mainItem.dataset.title = sideData.title;
+            mainItem.dataset.videoUrl = sideData.videoUrl;
+            mainItem.dataset.bgImage = sideData.bgImage;
+            mainItem.dataset.isNew = sideData.isNew;
+            mainItem.dataset.views = sideData.views;
+            
+            mainVideoSlot.querySelector('#main-video-bg').style.backgroundImage = `url('${sideData.bgImage}')`;
+            mainVideoSlot.querySelector('#main-video-link').href = sideData.videoUrl;
+            mainVideoSlot.querySelector('#main-video-title').textContent = sideData.title;
+            mainVideoSlot.querySelector('#main-video-badge').style.display = (sideData.isNew === 'true') ? 'block' : 'none';
+
+            // Update the side item that was clicked with the old main data
+            clickedSideItem.dataset.videoId = mainData.videoId;
+            clickedSideItem.dataset.title = mainData.title;
+            clickedSideItem.dataset.videoUrl = mainData.videoUrl;
+            clickedSideItem.dataset.bgImage = mainData.bgImage;
+            clickedSideItem.dataset.isNew = mainData.isNew;
+            clickedSideItem.dataset.views = mainData.views;
+            
+            // Re-sync all side item titles to fix truncation and disappearing title issues
+            const allSideItems = sideVideoList.querySelectorAll('.video-item');
+            allSideItems.forEach(item => {
+                const itemTitle = item.dataset.title;
+                const titleEl = item.querySelector('.video-item-title');
+                const viewsEl = item.querySelector('.video-item-views');
+
+                if (itemTitle && titleEl) {
+                    const maxLength = 40; // Max length for side titles before truncating
+                    titleEl.textContent = itemTitle.length > maxLength ? itemTitle.slice(0, maxLength - 3) + '...' : itemTitle;
+                }
+                if (viewsEl) {
+                    viewsEl.textContent = item.dataset.views || '';
+                }
+            });
+        });
+    }
+
+    // Video Player Modal Logic
+    const videoModal = document.getElementById('video-player-modal');
+    if(videoModal) {
+        const videoIframe = document.getElementById('youtube-iframe');
+        const closeVideoModalButton = document.getElementById('close-video-modal');
+        const videoModalOverlay = videoModal.querySelector('.modal-overlay');
+
+        const openVideoModal = (youtubeId) => {
+            if (videoIframe) {
+                videoIframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
+                videoModal.classList.remove('modal-hidden');
+            }
+        };
+
+        const closeVideoModal = () => {
+            if (videoIframe) {
+                videoModal.classList.add('modal-hidden');
+                // Stop video playback by clearing the src
+                videoIframe.src = '';
+            }
+        };
+
+        // Add listeners to all video play triggers
+        document.addEventListener('click', (e) => {
+            const playButton = e.target.closest('.video-play-button');
+            if (playButton) {
+                e.preventDefault();
+                // Check if the click is for swapping or playing
+                const parentVideoItem = playButton.closest('.video-item');
+                // If it's a side video, let the swap logic handle it, don't open modal.
+                // The main video play button is not inside a '.video-item'.
+                if (parentVideoItem && sideVideoList.contains(parentVideoItem)) {
+                    // This is a click on a play icon within the side list.
+                    // We let the swap logic above handle this. We can also choose to play it directly.
+                    // For now, let's assume any play button click should open the modal.
+                }
+
+                const youtubeId = playButton.dataset.youtubeId;
+                if (youtubeId) {
+                    openVideoModal(youtubeId);
+                }
+            }
+        });
+
+        // Listener for closing the modal
+        if (closeVideoModalButton) {
+            closeVideoModalButton.addEventListener('click', closeVideoModal);
+        }
+        if (videoModalOverlay) {
+            videoModalOverlay.addEventListener('click', closeVideoModal);
+        }
+    }
 });
