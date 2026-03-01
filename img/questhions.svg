@@ -1,0 +1,20 @@
+<svg viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42.000000" height="42.000000" fill="none" customFrame="url(#clipPath_1)">
+	<defs>
+		<clipPath id="clipPath_1">
+			<rect width="42.000000" height="42.000000" x="0.000000" y="0.000000" rx="4.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+		<clipPath id="clipPath_2">
+			<rect width="24.000000" height="24.000000" x="9.000000" y="9.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+	</defs>
+	<rect id="div.flex-shrink-0 mt-1 p-2 bg-black/50 rounded border border-dota-border group-hover:border-dota-gold transition-colors" width="42.000000" height="42.000000" x="0.000000" y="0.000000" rx="4.000000" fill="rgb(0,0,0)" fill-opacity="0.5" />
+	<rect id="div.flex-shrink-0 mt-1 p-2 bg-black/50 rounded border border-dota-border group-hover:border-dota-gold transition-colors" width="41.000000" height="41.000000" x="0.500000" y="0.500000" rx="3.500000" stroke="rgb(58,58,58)" stroke-width="1.000000" />
+	<g id="svg" clip-path="url(#clipPath_2)" customFrame="url(#clipPath_2)">
+		<rect id="svg" width="24.000000" height="24.000000" x="9.000000" y="9.000000" />
+		<circle id="4535" cx="21" cy="21" r="10" stroke="rgb(194,163,107)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+		<path id="4536" d="M18.09 18.0001C18.2773 17.4674 18.6113 16.9984 19.0533 16.6471C19.4954 16.2957 20.0276 16.0763 20.5888 16.0139C21.15 15.9516 21.7175 16.0489 22.2258 16.2947C22.7342 16.5405 23.1629 16.9248 23.4626 17.4034C23.7623 17.882 23.9208 18.4354 23.92 19.0001C23.92 21.0001 20.92 22.0001 20.92 22.0001" fill-rule="nonzero" stroke="rgb(194,163,107)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+		<path id="4537" d="M21 26L21.01 26" stroke="rgb(194,163,107)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+		<rect id="circle.[object SVGAnimatedString]" width="20.000000" height="20.000000" x="11.000000" y="11.000000" />
+		<rect id="path.[object SVGAnimatedString]" width="5.830000" height="6.000000" x="18.000000" y="16.000000" />
+	</g>
+</svg>

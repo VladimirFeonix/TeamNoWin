@@ -1,0 +1,15 @@
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240.000000" height="240.000000" fill="none" customFrame="#000000">
+	<defs>
+		<g id="pixso_custom_effect_1">
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="72" />
+		</g>
+		<filter id="filter_1" width="240.000000" height="240.000000" x="0.000000" y="0.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_1)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feGaussianBlur stdDeviation="24" result="effect_layerBlur_1" />
+		</filter>
+	</defs>
+	<g filter="url(#filter_1)">
+		<rect id="div.absolute inset-0 bg-dota-red blur-xl opacity-40 rounded-full" width="96.000000" height="96.000000" x="72.000000" y="72.000000" rx="48.000000" opacity="0.400000006" fill="rgb(141,37,37)" />
+	</g>
+</svg>

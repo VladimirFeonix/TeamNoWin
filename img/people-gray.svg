@@ -1,0 +1,11 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.000000" height="32.000000" fill="none">
+	<rect id="svg" width="32.000000" height="32.000000" x="0.000000" y="0.000000" />
+	<path id="4554" d="M21.3334 28L21.3334 25.3333C21.3334 24.3971 21.087 23.4774 20.6189 22.6667C20.1508 21.8559 19.4775 21.1826 18.6667 20.7145C17.856 20.2464 16.9363 20 16.0001 20L8.00008 20C7.06389 20 6.14418 20.2464 5.33341 20.7145C4.52265 21.1826 3.84938 21.8559 3.38128 22.6667C2.91318 23.4774 2.66675 24.3971 2.66675 25.3333L2.66675 28" fill-rule="nonzero" stroke="rgb(75,85,99)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+	<circle id="4555" cx="12.000082" cy="9.33333397" r="5.33333349" stroke="rgb(75,85,99)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+	<path id="4556" d="M29.3333 28L29.3333 25.3333C29.3327 24.5495 29.1593 23.7755 28.8256 23.0663C28.4918 22.3571 28.0058 21.7302 27.4022 21.2301C26.7986 20.7301 26.0922 20.3693 25.3333 20.1733" fill-rule="nonzero" stroke="rgb(75,85,99)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+	<path id="4557" d="M21.3333 4.17334C22.248 4.40755 23.0842 4.88043 23.7563 5.54364C24.4285 6.20685 24.9125 7.03662 25.1589 7.94816C25.4053 8.8597 25.4053 9.82032 25.1589 10.7319C24.9125 11.6434 24.4285 12.4732 23.7563 13.1364C23.0842 13.7996 22.248 14.2725 21.3333 14.5067" fill-rule="nonzero" stroke="rgb(75,85,99)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+	<rect id="path.[object SVGAnimatedString]" width="18.670000" height="8.000000" x="3.000000" y="20.000000" />
+	<rect id="circle.[object SVGAnimatedString]" width="10.670000" height="11.000000" x="7.000000" y="4.000000" />
+	<rect id="path.[object SVGAnimatedString]" width="4.000000" height="8.000000" x="25.000000" y="20.000000" />
+	<rect id="path.[object SVGAnimatedString]" width="4.010000" height="10.000000" x="21.000000" y="4.000000" />
+</svg>

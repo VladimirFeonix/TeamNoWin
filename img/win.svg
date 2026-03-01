@@ -1,0 +1,14 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.000000" height="32.000000" fill="none">
+	<rect id="svg" width="32.000000" height="32.000000" x="0.000000" y="0.000000" />
+	<path id="4547" d="M8.00002 12L6.00002 12C5.29609 12 4.61023 11.7772 4.04074 11.3634C3.47124 10.9497 3.04736 10.3662 2.82983 9.69676C2.61231 9.02729 2.61231 8.30613 2.82983 7.63665C3.04736 6.96717 3.47124 6.38374 4.04074 5.96998C4.61023 5.55622 5.29609 5.33337 6.00002 5.33337L8.00002 5.33337" fill-rule="nonzero" stroke="rgb(75,85,99)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+	<path id="4548" d="M24 12L26 12C26.7039 12 27.3898 11.7772 27.9593 11.3634C28.5288 10.9497 28.9527 10.3662 29.1702 9.69676C29.3877 9.02729 29.3877 8.30613 29.1702 7.63665C28.9527 6.96717 28.5288 6.38374 27.9593 5.96998C27.3898 5.55622 26.7039 5.33337 26 5.33337L24 5.33337" fill-rule="nonzero" stroke="rgb(75,85,99)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+	<path id="4549" d="M5.33331 29.3334L26.6666 29.3334" stroke="rgb(75,85,99)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+	<path id="4550" d="M13.3333 19.5466L13.3333 22.6666C13.3333 23.4 12.7066 23.9733 12.04 24.28C10.4666 25 9.33331 26.9866 9.33331 29.3333" fill-rule="nonzero" stroke="rgb(75,85,99)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+	<path id="4551" d="M18.6667 19.5466L18.6667 22.6666C18.6667 23.4 19.2934 23.9733 19.96 24.28C21.5334 25 22.6667 26.9866 22.6667 29.3333" fill-rule="nonzero" stroke="rgb(75,85,99)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+	<path id="4552" d="M8 2.66663L8 12C8 13.6894 8.53484 15.3355 9.52786 16.7022C10.5209 18.069 11.9211 19.0863 13.5279 19.6084C15.1346 20.1305 16.8654 20.1305 18.4721 19.6084C20.0789 19.0863 21.4791 18.069 22.4721 16.7022C23.4652 15.3355 24 13.6894 24 12L24 2.66663L8 2.66663Z" fill-rule="nonzero" stroke="rgb(75,85,99)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+	<rect id="path.[object SVGAnimatedString]" width="5.330000" height="7.000000" x="3.000000" y="5.000000" />
+	<rect id="path.[object SVGAnimatedString]" width="5.330000" height="7.000000" x="24.000000" y="5.000000" />
+	<rect id="path.[object SVGAnimatedString]" width="4.000000" height="10.000000" x="9.000000" y="20.000000" />
+	<rect id="path.[object SVGAnimatedString]" width="4.000000" height="10.000000" x="19.000000" y="20.000000" />
+	<rect id="path.[object SVGAnimatedString]" width="16.000000" height="17.000000" x="8.000000" y="3.000000" />
+</svg>
