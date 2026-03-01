@@ -145,62 +145,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mainVideoSlot && sideVideoList) {
         sideVideoList.addEventListener('click', (e) => {
-            const clickedSideItem = e.target.closest('.video-item');
-            if (!clickedSideItem) return;
+            const clickedItem = e.target.closest('.video-item');
+            if (!clickedItem) return;
 
-            const mainItem = mainVideoSlot.querySelector('[data-video-id]');
+            const mainItem = mainVideoSlot; // The main slot itself
             if (!mainItem) return;
 
-            // Store data from both items
+            // Store data from both items by reading their datasets
             const mainData = { ...mainItem.dataset };
-            const sideData = { ...clickedSideItem.dataset };
+            const sideData = { ...clickedItem.dataset };
 
             // Prevent swapping with itself
             if (mainData.videoId === sideData.videoId) return;
 
-            // Update the main item with side data
+            // --- Update Main Slot using Side Data ---
             mainItem.dataset.videoId = sideData.videoId;
             mainItem.dataset.title = sideData.title;
-            mainItem.dataset.videoUrl = sideData.videoUrl;
+            mainItem.dataset.youtubeId = sideData.youtubeId;
             mainItem.dataset.bgImage = sideData.bgImage;
             mainItem.dataset.isNew = sideData.isNew;
             mainItem.dataset.views = sideData.views;
-            
+
+            // Update visuals of the main slot
             mainVideoSlot.querySelector('#main-video-bg').style.backgroundImage = `url('${sideData.bgImage}')`;
-            const mainPlayButton = mainVideoSlot.querySelector('#main-video-link');
-            mainPlayButton.dataset.youtubeId = sideData.youtubeId;
             mainVideoSlot.querySelector('#main-video-title').textContent = sideData.title;
+            mainVideoSlot.querySelector('#main-video-link').dataset.youtubeId = sideData.youtubeId; // Update play button ID
             mainVideoSlot.querySelector('#main-video-badge').style.display = (sideData.isNew === 'true') ? 'block' : 'none';
 
-            // Update the side item that was clicked with the old main data
-            clickedSideItem.dataset.videoId = mainData.videoId;
-            clickedSideItem.dataset.title = mainData.title;
-            clickedSideItem.dataset.youtubeId = mainData.youtubeId;
-            clickedSideItem.dataset.bgImage = mainData.bgImage;
-            clickedSideItem.dataset.isNew = mainData.isNew;
-            clickedSideItem.dataset.views = mainData.views;
+            // --- Update Side Item using Main Data ---
+            clickedItem.dataset.videoId = mainData.videoId;
+            clickedItem.dataset.title = mainData.title;
+            clickedItem.dataset.youtubeId = mainData.youtubeId;
+            clickedItem.dataset.bgImage = mainData.bgImage;
+            clickedItem.dataset.isNew = mainData.isNew;
+            clickedItem.dataset.views = mainData.views;
+
+            // Update visuals of the side item
+            clickedItem.querySelector('.video-item-title').textContent = mainData.title;
+            clickedItem.querySelector('.video-play-button').dataset.youtubeId = mainData.youtubeId; // Update play button ID
             
-            // Update the play button inside the swapped side item
-            const sidePlayButton = clickedSideItem.querySelector('.video-play-button');
-            if (sidePlayButton) {
-                sidePlayButton.dataset.youtubeId = mainData.youtubeId;
-            }
-
-            // Re-sync all side item titles to fix truncation and disappearing title issues
-            const allSideItems = sideVideoList.querySelectorAll('.video-item');
-            allSideItems.forEach(item => {
-                const itemTitle = item.dataset.title;
-                const titleEl = item.querySelector('.video-item-title');
-                const viewsEl = item.querySelector('.video-item-views');
-
-                if (itemTitle && titleEl) {
-                    const maxLength = 40; // Max length for side titles before truncating
-                    titleEl.textContent = itemTitle.length > maxLength ? itemTitle.slice(0, maxLength - 3) + '...' : itemTitle;
-                }
-                if (viewsEl) {
-                    viewsEl.textContent = item.dataset.views || '';
-                }
-            });
+            // The icon background doesn't seem to be based on data, so we leave it alone.
         });
     }
 
