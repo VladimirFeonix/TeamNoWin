@@ -167,18 +167,25 @@ document.addEventListener('DOMContentLoaded', () => {
             mainItem.dataset.views = sideData.views;
             
             mainVideoSlot.querySelector('#main-video-bg').style.backgroundImage = `url('${sideData.bgImage}')`;
-            mainVideoSlot.querySelector('#main-video-link').href = sideData.videoUrl;
+            const mainPlayButton = mainVideoSlot.querySelector('#main-video-link');
+            mainPlayButton.dataset.youtubeId = sideData.youtubeId;
             mainVideoSlot.querySelector('#main-video-title').textContent = sideData.title;
             mainVideoSlot.querySelector('#main-video-badge').style.display = (sideData.isNew === 'true') ? 'block' : 'none';
 
             // Update the side item that was clicked with the old main data
             clickedSideItem.dataset.videoId = mainData.videoId;
             clickedSideItem.dataset.title = mainData.title;
-            clickedSideItem.dataset.videoUrl = mainData.videoUrl;
+            clickedSideItem.dataset.youtubeId = mainData.youtubeId;
             clickedSideItem.dataset.bgImage = mainData.bgImage;
             clickedSideItem.dataset.isNew = mainData.isNew;
             clickedSideItem.dataset.views = mainData.views;
             
+            // Update the play button inside the swapped side item
+            const sidePlayButton = clickedSideItem.querySelector('.video-play-button');
+            if (sidePlayButton) {
+                sidePlayButton.dataset.youtubeId = mainData.youtubeId;
+            }
+
             // Re-sync all side item titles to fix truncation and disappearing title issues
             const allSideItems = sideVideoList.querySelectorAll('.video-item');
             allSideItems.forEach(item => {
