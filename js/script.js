@@ -155,40 +155,47 @@ document.addEventListener('DOMContentLoaded', () => {
             const mainItem = mainVideoSlot.querySelector('[data-video-id]');
             if (!mainItem) return;
 
-            // Store data from both items by reading their datasets
-            const mainData = { ...mainItem.dataset };
-            const sideData = { ...clickedItem.dataset };
-
             // Prevent swapping with itself
-            if (mainData.videoId === sideData.videoId) return;
+            if (mainItem.dataset.videoId === clickedItem.dataset.videoId) return;
+
+            // Store data from both items in temporary variables
+            const mainTitle = mainItem.dataset.title;
+            const mainYoutubeId = mainItem.dataset.youtubeId;
+            const mainBgImage = mainItem.dataset.bgImage;
+            const mainIsNew = mainItem.dataset.isNew;
+            const mainVideoId = mainItem.dataset.videoId;
+            const mainViews = mainItem.dataset.views;
+
+            const sideTitle = clickedItem.dataset.title;
+            const sideYoutubeId = clickedItem.dataset.youtubeId;
+            const sideBgImage = clickedItem.dataset.bgImage;
+            const sideIsNew = clickedItem.dataset.isNew;
+            const sideVideoId = clickedItem.dataset.videoId;
+            const sideViews = clickedItem.dataset.views;
 
             // --- Update Main Slot using Side Data ---
-            mainItem.dataset.videoId = sideData.videoId;
-            mainItem.dataset.title = sideData.title;
-            mainItem.dataset.youtubeId = sideData.youtubeId;
-            mainItem.dataset.bgImage = sideData.bgImage;
-            mainItem.dataset.isNew = sideData.isNew;
-            mainItem.dataset.views = sideData.views;
+            mainItem.dataset.videoId = sideVideoId;
+            mainItem.dataset.title = sideTitle;
+            mainItem.dataset.youtubeId = sideYoutubeId;
+            mainItem.dataset.bgImage = sideBgImage;
+            mainItem.dataset.isNew = sideIsNew;
+            mainItem.dataset.views = sideViews;
 
-            // Update visuals of the main slot
-            mainVideoSlot.querySelector('#main-video-bg').style.backgroundImage = `url('${sideData.bgImage}')`;
-            mainVideoSlot.querySelector('#main-video-title').textContent = sideData.title;
-            mainVideoSlot.querySelector('#main-video-link').dataset.youtubeId = sideData.youtubeId; // Update play button ID
-            mainVideoSlot.querySelector('#main-video-badge').style.display = (sideData.isNew === 'true') ? 'block' : 'none';
+            mainVideoSlot.querySelector('#main-video-bg').style.backgroundImage = `url('${sideBgImage}')`;
+            mainVideoSlot.querySelector('#main-video-title').textContent = sideTitle;
+            mainVideoSlot.querySelector('#main-video-link').dataset.youtubeId = sideYoutubeId;
+            mainVideoSlot.querySelector('#main-video-badge').style.display = (sideIsNew === 'true') ? 'block' : 'none';
 
             // --- Update Side Item using Main Data ---
-            clickedItem.dataset.videoId = mainData.videoId;
-            clickedItem.dataset.title = mainData.title;
-            clickedItem.dataset.youtubeId = mainData.youtubeId;
-            clickedItem.dataset.bgImage = mainData.bgImage;
-            clickedItem.dataset.isNew = mainData.isNew;
-            clickedItem.dataset.views = mainData.views;
+            clickedItem.dataset.videoId = mainVideoId;
+            clickedItem.dataset.title = mainTitle;
+            clickedItem.dataset.youtubeId = mainYoutubeId;
+            clickedItem.dataset.bgImage = mainBgImage;
+            clickedItem.dataset.isNew = mainIsNew;
+            clickedItem.dataset.views = mainViews;
 
-            // Update visuals of the side item
-            clickedItem.querySelector('.video-item-title').textContent = mainData.title;
-            clickedItem.querySelector('.video-play-button').dataset.youtubeId = mainData.youtubeId; // Update play button ID
-            
-            // The icon background doesn't seem to be based on data, so we leave it alone.
+            clickedItem.querySelector('.video-item-title').textContent = mainTitle;
+            clickedItem.querySelector('.video-play-button').dataset.youtubeId = mainYoutubeId;
         });
     }
 
