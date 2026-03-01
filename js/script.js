@@ -145,6 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mainVideoSlot && sideVideoList) {
         sideVideoList.addEventListener('click', (e) => {
+            // If the play button was clicked, don't swap. Let the other listener handle it.
+            if (e.target.closest('.video-play-button')) {
+                return;
+            }
             const clickedItem = e.target.closest('.video-item');
             if (!clickedItem) return;
 
